@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start:site1": "yarn workspace site1 start",
+    "start:shell": "yarn workspace shell start",
+    "start": "concurrently \"npm:start:site1\"  \"npm:start:shell\""
+  },
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
